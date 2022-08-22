@@ -1,0 +1,101 @@
+
+ROM used:   6070/32768 (19%)
+            6070/32768 (19%) including unused fragments
+
+            1.4 Average locations per line
+            5.2 Average locations per statement
+
+RAM used:   100/1536 (7%) at main() level
+            115/1536 (7%) worst case
+
+Stack used: 6 worst case (5 in main + 1 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+ 1307   734  63  main.c
+    9     0   0  main.h
+  867     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4520.h
+  435     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
+   32     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h
+   28     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h
+  298    79   7  flex_lcd420.c
+ 1352   359  31  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h
+----- -----
+ 4328  1172 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     38   0    1             @delay_ms1
+0     62   1    0             @GET_TICKS_1
+0     20   0    0             @const801
+0     64   1    1    328  2.7  lcd_send_nibble
+0     52   0    1    389  2.3  lcd_read_nibble
+0     36   0    3    165  3.3  lcd_read_byte
+0     66   1    3    319  4.1  lcd_send_byte
+0     82   1    2    411  4.5  lcd_init
+0     64   1    4    386  6.5  lcd_gotoxy
+0     72   1    1    310  4.8  lcd_putc
+0     56   0    2             @ITOF
+0     70   1    2    194  3.8  serial_comm
+0     10   0    0             @const1029
+0     34   0    3             @PSTRINGCN_9600_31766_31767
+0     40   0    2             @PSTRINGR_9600_31766_31767
+0     58   0    2    165  3.6  delay_func
+0    178   1    1   1047  1.5  normal
+0    178   1    1   1047  1.5  reverse
+0     24   0    0     86  1.3  stop
+0     20   0    1     96  3.2  check_right_proxy
+0     20   0    1     96  3.2  check_left_proxy
+0    108   1    0    741  3.8  read_serial_speed
+0    354   3    9   1134  7.2  centerline
+0     20   0    0   1134  7.2  @const1050
+0     32   0    2             @PSTRINGC_823
+0     24   0    0   2296  7.6  @const1052
+0    334   3    9   2296  7.6  gogo
+0     72   1    0   2296  7.6  @const1060
+0     50   0    2    194  4.5  lcd_load_custom_chars
+0   3314  27   27  20155 12.2  MAIN
+0     10   0    0  17431 11.7  @const1067
+0     40   0    3             @DIV88
+0    170   1    6             @PRINTF_D_823
+0     10   0    0             @const1075
+0     10   0    0             @const1076
+0     10   0    0             @const1077
+0      2   0    0             @const1081
+0      6   0    0             @const1083
+0      2   0    0             @const1084
+0      2   0    0             @const1086
+0      2   0    0             @const1088
+0      6   0    0             @const1090
+0      2   0    0             @const1091
+0      2   0    0             @const1093
+0      2   0    0             @const1095
+0      2   0    0             @const1097
+0      2   0    0             @const1099
+0      2   0    0             @const1101
+0     56   0    4             @SFTOI
+0     10   0    0             @const1109
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               23
+    Statements              1172
+    Comments                843
+    Volume (V)              72145
+    Difficulty (D)          119.7
+    Effort to implement (E) 8632423
+    Time to implement (T)   133 hours, 13 minutes
+    Est Delivered Bugs (B)  14
+    Cyclomatic Complexity   241
+    Maintainability (MI)    65
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-00006     0  4  
+00008-000AC   166  0  
+000AE-07FFE  5900  26694  
+
+
+
