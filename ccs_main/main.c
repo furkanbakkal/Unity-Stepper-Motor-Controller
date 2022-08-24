@@ -1,10 +1,8 @@
 #include <main.h>
 #include <string.h>
 #include <flex_lcd420.c>
-#INCLUDE <stdlib.h>
-#fuses XT,NOWDT,NOPROTECT,NOBROWNOUT,NOLVP,NOPUT,NOWRT,NODEBUG,NOCPD
-#use rs232(baud=9600,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8,stream=PORT1)
 
+#use rs232(baud=9600,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8,stream=PORT1)
 
 #define A1 PIN_D2
 #define A2 PIN_B1
@@ -46,7 +44,19 @@ char quit1=False;
 char quit2=False;
 
 char proxy=False;
-int16 centercounter=0;
+char centered=False;
+unsigned int16 centercounter=0;
+char center_flag=False;
+
+int block=0;
+unsigned int16 step=0;
+int line1=0;
+int line2=0;
+int threshold=0;
+
+char start=True;
+char q=False;
+char return_value=True;
 
 TICK_TYPE StartTick,FinishTick,CurrentTick;
 
@@ -86,10 +96,26 @@ disable_interrupts (int_rda) ;
 
 void delay_func(loop){
 
-delay_cycles(200);delay_cycles(200);delay_cycles(200);
+delay_cycles(200);delay_cycles(200);delay_cycles(200);delay_cycles(200);delay_cycles(200);delay_cycles(250);
 for(int i=0;i<10-loop;i++){
-   delay_cycles(150);
+   delay_cycles(250);
 }
+}
+
+void distance_measure(){
+
+   if(centered){
+     
+     
+     line1=(step/threshold)/3;
+     line2=line1 % 3;
+   
+     lcd_gotoxy(line1,4);
+     lcd_putc(three_dot);    
+     
+     }
+     
+
 }
 
 void normal(loop)
@@ -143,65 +169,14 @@ void normal(loop)
       output_low (B1) ;
       output_high (B2) ;
       delay_func (loop) ;
- 
-
-
-/*
-//ONE STEPPING  
-   output_high (A1) ;
-   output_low (A2) ;
-   output_low (B1) ;
-   output_low (B2) ;
-   delay_ms (delay) ;
-   
-   output_low (A1) ;
-   output_low (A2) ;
-   output_high (B1) ;
-   output_low (B2) ;
-   delay_ms (delay) ;
-   
-   output_low (A1) ;
-   output_high (A2) ;
-   output_low (B1) ;
-   output_low (B2) ;
-   delay_ms (delay) ;
-   
-   output_low (A1) ;
-   output_low (A2) ;
-   output_low (B1) ;
-   output_high (B2) ;
-   delay_ms (delay) ;
-
-
-*/
-/*
-//TWO STEPPING
-
-output_high (A1) ;
-   output_low (A2) ;
-   output_high (B1) ;
-   output_low (B2) ;
-   delay_ms (delay) ;
-   
-   output_low (A1) ;
-   output_high (A2) ;
-   output_high (B1) ;
-   output_low (B2) ;
-   delay_ms (delay) ;
-   
-   output_low (A1) ;
-   output_high (A2) ;
-   output_low (B1) ;
-   output_high (B2) ;
-   delay_ms (delay) ;
-   
-   output_high (A1) ;
-   output_low (A2) ;
-   output_low (B1) ;
-   output_high (B2) ;
-   delay_ms (delay) ;
-   */
-
+      
+      if(center_flag==True){
+      centercounter=centercounter+1;
+      }
+      
+      step--;
+  
+      
 }
 
 void reverse(loop)
@@ -253,6 +228,9 @@ void reverse(loop)
    output_low (B1);
    output_low (B2);
    delay_func (loop) ;
+   
+   step++;
+
 }
 
 void stop()
@@ -266,10 +244,10 @@ void stop()
 
 char check_right_proxy(){
 
-   if (input(proxy_right)==1) {
+   if (input(proxy_right)==1){
         proxy=True;
       }
-       
+      
    else {
       proxy=False;
    }
@@ -287,12 +265,90 @@ char check_left_proxy(){
    }
    return proxy;
 }
-void acc_start_normal_man(){
 
-    
+char acc_start_normal_man(){
+   
+ while (start==True){
+   c=abs(delay_s-(10-accel));
+   for(int i=0;i<10-accel;i++){      
+      for(int j=0;j<accel_value;j++){
+      
+         if(input (button1) == 0 | input(button3) == 1 | check_right_proxy()){
+            stop();
+            return return_value=False;
+            }
+               
+         normal(c);
+         }
+      c=c+1;  
+      }
+      start=False;
+      return return_value=True;
+   }  
+         
 }
 
-float read_serial_speed() 
+char acc_start_reverse_man(){
+
+ while (start==True){
+   c=abs(delay_s-(10-accel));
+   for(int i=0;i<10-accel;i++){   
+      for(int j=0;j<accel_value;j++){
+      
+         if(input (button3) == 0 | input (button1) == 1 | check_left_proxy()){
+            stop();
+            return return_value=False;
+            }
+
+         reverse(c);
+         }
+   c=c+1;  
+   }
+   start=False;
+   return return_value=True;
+   }
+}
+
+char acc_start_normal_auto(){
+ while (start==True){
+            c=abs(delay_s-(10-accel));
+            for(int i=0;i<10-accel;i++){                
+               for(int j=0;j<accel_value;j++){
+               
+                  if(input (button1) == 1 | input (button3) == 1 | check_right_proxy()){
+                     stop();
+                     return return_value=False;
+                     }  
+                  normal(c);
+                  }
+               c=c+1;  
+               }
+               start=False;
+               return return_value=True;
+            }
+}
+
+char acc_start_reverse_auto(){
+
+while (start==True){
+            c=abs(delay_s-(10-accel));
+            for(int i=0;i<10-accel;i++){       
+               for(int j=0;j<accel_value;j++){
+               
+                  if(input (button1) == 1 | input (button3) == 1 | check_left_proxy()){
+                     stop();
+                     return return_value=False;
+                     }    
+                  reverse(c);
+                  }
+               c=c+1;  
+               }
+               start=False;
+               return return_value=True;
+            }
+}
+
+float read_serial_speed()
 {
    if (str[0] == 's')
    {
@@ -356,9 +412,8 @@ float read_serial_speed()
 }
 
 void centerline(delay){
-  centercounter=0;
   lcd_gotoxy(1,4);
-  lcd_putc("      Homing...   ");
+  lcd_putc("      Homing...    ");
          
   while (1){
    
@@ -373,6 +428,9 @@ void centerline(delay){
     
     if(input (button1) == 1 | input (button3) == 1){
       stop();
+      lcd_gotoxy(1,4);
+      lcd_putc("  Center Failed");
+      centered=False;
       return;
       }
    
@@ -393,11 +451,12 @@ void centerline(delay){
       
       if(input (button1) == 1 | input (button3) == 1){
       stop();
+      lcd_gotoxy(1,4);
+      lcd_putc("  Center Failed");
+      centered=False;
       return;
       }
-      
-      
-      centercounter++;
+      center_flag=True;
       normal(delay);
       
       //printf("data: %s", centercounter);
@@ -405,22 +464,31 @@ void centerline(delay){
      
     FinishTick = get_ticks();
     CurrentTick = get_ticks();
-    
+   
    while (CurrentTick-FinishTick <= (FinishTick-StartTick)/2 ){
-    CurrentTick=get_ticks();
+     CurrentTick=get_ticks();
     
      if(input (button1) == 1 | input (button3) == 1){
       stop();
       return;
       }
-      
+
     reverse(delay);
    }
    
-
    stop();
+   
+   lcd_gotoxy(1,3);
+   printf(lcd_putc,"count: %Lu", centercounter);
+   block=centercounter/20;
+   block++;
+   step=centercounter/2;
+   centered=True;
+   center_flag=False;
+   threshold=centercounter/60;
+   
    lcd_gotoxy(1,4);
-   lcd_putc("                       ");
+   lcd_putc("Homing Succesfull");
    return;
    
    
@@ -623,21 +691,38 @@ for(i = 0; i < sizeof(lcd_custom_chars); i++)
 lcd_send_byte(0, 0x80);
 }
 
+/*
+#int_timer1
+void Timer1_isr(void){
+   
+  output_toggle(PIN_D4);
+  distance_measure();
+  set_timer1(1);                              // Timer1 preload value
+  clear_interrupt(INT_TIMER1);                   // Clear Timer1 overflow bit
+}
+*/
+
 void main()
 {
-   setup_adc_ports (AN0, VSS_VDD);
-   setup_adc (ADC_CLOCK_INTERNAL|ADC_TAD_MUL_0);
+   //setup_adc_ports (AN0, VSS_VDD);
+   //setup_adc (ADC_CLOCK_INTERNAL|ADC_TAD_MUL_0);
+   //setup_timer_1(T0_INTERNAL | T0_DIV_1 );
    
    setup_CCP1 (CCP_OFF);
-   enable_interrupts (GLOBAL);
+   
+     //clear_interrupt(INT_TIMER1);                   // Clear Timer1 overflow bit
+     //enable_interrupts(INT_TIMER1);                 // Enable Timer1 interrupt
+     enable_interrupts(GLOBAL);                     // Enable global interrupts
+     //setup_timer_1(T1_INTERNAL | T1_DIV_BY_8);      // Timer1 configuration: internal clock source + 8 prescaler
+     //set_timer1(1);
+  
+
    
    lcd_init();
 
    lcd_load_custom_chars(); 
 
-  
-   
-   FinishTick = StartTick = CurrentTick = get_ticks(); //timers for centering
+   FinishTick = StartTick = CurrentTick = get_ticks(); //timers for centering  
    
    while (TRUE)
    {
@@ -662,13 +747,18 @@ void main()
       lcd_gotoxy(1,2);
       lcd_putc("Accel: %");
       printf(lcd_putc,"%d",accel*10);
+      
+      if(centered==False){
+         lcd_gotoxy(1,4);
+         lcd_putc("  Center Machine");
+      }
      
       
 ///////////////////>>>>>> MODE CHANGE  <<<<<//////////////////////
 
-      if (input (button5) == 1)
+      if (input (button5))
       {
-         while(input (button5) == 1);
+         while(input (button5)){};
          int mode_cursor=1;
          char mod_flag=False;
          
@@ -677,9 +767,9 @@ void main()
          while(1){
          
           if(mode_cursor==1){ //SET SPEED
-            
+             
             CurrentTick=get_ticks();
-            
+           
             if(CurrentTick-StartTick>2500 & mod_flag==True){
             
             lcd_gotoxy(8,mode_cursor);
@@ -699,7 +789,7 @@ void main()
             StartTick=CurrentTick;
             }
             
-            if(input(button1)==1){
+            if(input(button1)){
             delay_s--;
             
             if(delay_s<=0){
@@ -714,7 +804,7 @@ void main()
             
             }
             
-            if(input(button3)==1){
+            if(input(button3)){
             delay_s++;
             
             if(delay_s>=10){
@@ -724,7 +814,7 @@ void main()
             lcd_gotoxy(8,mode_cursor);
             lcd_putc("%");
             printf(lcd_putc,"%d ",delay_s*10);
-            
+
             delay_ms(500);
             
             }  
@@ -733,8 +823,9 @@ void main()
  ////////////////////////
  
          if(mode_cursor==2){ // SET ACCEL
+          
             CurrentTick=get_ticks();
-            
+           
             if(CurrentTick-StartTick>2500 & mod_flag==True){
             
             lcd_gotoxy(8,mode_cursor);
@@ -753,8 +844,8 @@ void main()
             mod_flag=True;
             StartTick=CurrentTick;
             }
-            
-              if(input(button1)==1){
+             
+              if(input(button1)){
                accel--;
                
                if(accel<=0){
@@ -768,8 +859,8 @@ void main()
                delay_ms(500);
                
                }
-            
-            if(input(button3)==1){
+           
+            if(input(button3)){
                accel++;
                
                if(accel>=11){
@@ -1014,55 +1105,21 @@ void main()
       
 
 ////////////////>>>>>> MANUEL <<<<< ////////////////////
-char start=True;
-char q=False;
+start=True;
+q=False;
 
       while (input (button1) == 1  & mode_manuel == TRUE)
       {
-         if (check_right_proxy()){
-               stop();
-               correct = False;
-               break;
+         if (check_right_proxy() | input (button3) == 1){
+            stop();
+            correct = False;
+            break;
           }
          
-        while (start==True){
-         c=abs(delay_s-(10-accel));
-         for(int i=0;i<10-accel;i++){
-         
-             if (q==True){
-               break;
-               }
-              
-            for(int j=0;j<accel_value;j++){
-            
-               if(input (button1) == 0 | input(button3) == 1){
-                  stop();
-                  q=True;
-                  break;
-                  }
-                  
-                 if (check_right_proxy()){
-                  stop();
-                  q=True;
-                  break;
-                 }
-                     
-               normal(c);
-               }
-            c=c+1;  
-            }
-            start=False;
-         }  
-         
-         if(input (button3) == 1){
-         stop();
-         break;
-         }
-         
-         
-         
-          if (q==True){
-            q=!q;
+         acc_start_normal_man();
+
+         if (return_value==False){
+            return_value=True;
             break;
             }
 
@@ -1072,54 +1129,16 @@ char q=False;
          
       while (input (button3) == 1 & mode_manuel == TRUE)
       {
-         if (check_left_proxy()){
+         if (check_left_proxy() | input (button1) == 1){
                stop();
                correct = False;
                break;
           }
           
-         while (start==True){
-         c=abs(delay_s-(10-accel));
-         for(int i=0;i<10-accel;i++){   
-            
-            if (q==True){
-            break;
-            }
-            
-            for(int j=0;j<accel_value;j++){
-            
-               if(input (button3) == 0){
-                  stop();
-                  q=True;
-                  break;
-                  }
-                  
-                if(input (button1) == 1){
-                   stop();
-                  q=True;
-                  break;
-                  }
-                  
-                 if (check_left_proxy()){
-                  stop();
-                  q=True;
-                  break;
-                 }
-                  
-               reverse(c);
-               }
-         c=c+1;  
-         }
-         start=False;
-         }
-         
-         if (input (button1) == 1){
-         stop();
-         break;
-         }
-         
-         if (q==True){
-            q=!q;
+        acc_start_reverse_man();
+
+        if (return_value==False){
+            return_value=True;
             break;
             }
         
@@ -1177,49 +1196,28 @@ char q=False;
       if (input (button1) == 1 & mode_auto == TRUE)
       {
       start=True;
-      q=False;
       delay_ms(500);
       
          while (TRUE)
          {  
-         while (start==True){
-            c=abs(delay_s-(10-accel));
-            for(int i=0;i<10-accel;i++){
-            
-                if (q==True){
-                  break;
-                  }
-                 
-               for(int j=0;j<accel_value;j++){
-               
-                  if(input (button1) == 1 | input (button3) == 1){
-                     stop();
-                     q=True;
-                     break;
-                     }
-                     
-                    if (check_right_proxy()){
-                     stop();
-                     q=True;
-                     break;
-                    }
-                        
-                  normal(c);
-                  }
-               c=c+1;  
-               }
-               start=False;
-            }
+        
          
             if (check_right_proxy()){
                stop();
                correct = False;
                break;
           }
-          
+            
+            acc_start_normal_auto();
+
+            if (return_value==False){
+                  return_value=True;
+                  break;
+            }
+            
             normal (delay_s);
             
-            if (input (button2) == 1|input (button3) == 1|input (button4) == 1)
+            if (input (button2) == 1 | input (button3) == 1 | input (button4) == 1)
             {
                break;
             }
@@ -1229,48 +1227,26 @@ char q=False;
       if (input (button3) == 1 & mode_auto == TRUE)
       {
          start=True;
-         q=False;
          delay_ms(500);
          
       
          while (TRUE)
          {  
-            
-            while (start==True){
-            c=abs(delay_s-(10-accel));
-            for(int i=0;i<10-accel;i++){
-            
-                if (q==True){
-                  break;
-                  }
-                 
-               for(int j=0;j<accel_value;j++){
-               
-                  if(input (button1) == 1 | input (button3) == 1){
-                     stop();
-                     q=True;
-                     break;
-                     }
-                     
-                    if (check_left_proxy()){
-                     stop();
-                     q=True;
-                     break;
-                    }
-                        
-                  reverse(c);
-                  }
-               c=c+1;  
-               }
-               start=False;
-            }
-            
+                      
          
             if (check_left_proxy()){
                stop();
                correct = False;              
                break;
           }
+
+             acc_start_reverse_auto();
+
+            if (return_value==False){
+                  return_value=True;
+                  break;
+            }
+
             reverse (delay_s);
             
             if (input (button2) == 1|input (button1) == 1|input (button4) == 1)
