@@ -1,0 +1,20 @@
+Compiling C:\Users\furka\Desktop\Unity\lcd_stepper_control\main on 02-Eyl-22 at 18:00
+--- Info 300 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.h" Line 7(1,1): More info:   Timer 0 tick time is 128,00 us
+>>> Warning 214 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 187(1,1): Operator precedance rules may not be as intended, use () to clarify
+>>> Warning 214 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 187(1,1): Operator precedance rules may not be as intended, use () to clarify
+>>> Warning 203 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 533(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 555(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 624(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 626(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 672(1,1): Condition always TRUE
+>>> Warning 205 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 968(1,1): Unsigned variable is never less than zero
+>>> Warning 203 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 1098(1,1): Condition always TRUE
+>>> Warning 214 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 1104(1,1): Operator precedance rules may not be as intended, use () to clarify
+>>> Warning 214 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 1114(1,1): Operator precedance rules may not be as intended, use () to clarify
+>>> Warning 214 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 1160(1,1): Operator precedance rules may not be as intended, use () to clarify
+>>> Warning 214 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 1170(1,1): Operator precedance rules may not be as intended, use () to clarify
+>>> Warning 214 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 1496(1,1): Operator precedance rules may not be as intended, use () to clarify
+>>> Warning 214 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 1521(1,1): Operator precedance rules may not be as intended, use () to clarify
+      Memory usage:   ROM=12%      RAM=3% - 3%
+      0 Errors,  15 Warnings.
+Build Successful.
