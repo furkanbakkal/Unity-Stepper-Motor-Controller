@@ -1,0 +1,480 @@
+ÀÄmain
+   ÃÄMAIN  0/3984  Ram=12
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄ@cinit2  (Inline)  Ram=0
+   ³  ÃÄlcd_init  0/82  Ram=2
+   ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ³  ÃÄlcd_send_nibble  0/70  Ram=1
+   ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ³  ÃÄlcd_send_nibble  0/70  Ram=1
+   ³  ³  ÃÄ@const868  0/20  Ram=0
+   ³  ³  ÀÄlcd_send_byte  0/66  Ram=3
+   ³  ³     ÃÄlcd_read_byte  0/36  Ram=3
+   ³  ³     ³  ÃÄlcd_read_nibble  0/64  Ram=1
+   ³  ³     ³  ÀÄlcd_read_nibble  0/64  Ram=1
+   ³  ³     ÃÄlcd_send_nibble  0/70  Ram=1
+   ³  ³     ÀÄlcd_send_nibble  0/70  Ram=1
+   ³  ÃÄlcd_load_custom_chars  0/50  Ram=2
+   ³  ³  ÃÄlcd_send_byte  0/66  Ram=3
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@const1035  0/40  Ram=0
+   ³  ³  ÃÄlcd_send_byte  0/66  Ram=3
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄlcd_send_byte  0/66  Ram=3
+   ³  ³     ÀÄ*
+   ³  ÃÄ@GET_TICKS_1  0/82  Ram=0
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄlcd_send_byte  0/66  Ram=3
+   ³  ³     ÀÄ*
+   ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ÀÄlcd_putc  0/72  Ram=1
+   ³  ³     ÃÄlcd_send_byte  0/66  Ram=3
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ³     ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÃÄlcd_send_byte  0/66  Ram=3
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÀÄlcd_send_byte  0/66  Ram=3
+   ³  ³        ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_LU_890  0/186  Ram=9
+   ³  ³  ÀÄlcd_putc  0/72  Ram=1
+   ³  ³     ÀÄ*
+   ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_D_890  0/170  Ram=6
+   ³  ³  ÃÄ@DIV88  0/40  Ram=3
+   ³  ³  ÃÄ@DIV88  0/40  Ram=3
+   ³  ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄlcd_putc  0/72  Ram=1
+   ³  ³     ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_U_890  0/102  Ram=2
+   ³  ³  ÃÄ@DIV88  0/40  Ram=3
+   ³  ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@DIV88  0/40  Ram=3
+   ³  ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄlcd_putc  0/72  Ram=1
+   ³  ³     ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_U_890  0/102  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄ@GET_TICKS_1  0/82  Ram=0
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄ@GET_TICKS_1  0/82  Ram=0
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_D_890  0/170  Ram=6
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_D_890  0/170  Ram=6
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_D_9600_31766_31767  0/178  Ram=6
+   ³  ³  ÃÄ@DIV88  0/40  Ram=3
+   ³  ³  ÀÄ@DIV88  0/40  Ram=3
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_D_890  0/170  Ram=6
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_D_9600_31766_31767  0/178  Ram=6
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_9600_31766_31767  0/34  Ram=2
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄ@GET_TICKS_1  0/82  Ram=0
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_D_890  0/170  Ram=6
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_D_890  0/170  Ram=6
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_D_9600_31766_31767  0/178  Ram=6
+   ³  ³  ÀÄ*
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_D_890  0/170  Ram=6
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_D_9600_31766_31767  0/178  Ram=6
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_9600_31766_31767  0/34  Ram=2
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_D_890  0/170  Ram=6
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_D_890  0/170  Ram=6
+   ³  ³  ÀÄ*
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_D_890  0/170  Ram=6
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_D_890  0/170  Ram=6
+   ³  ³  ÀÄ*
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄread_serial_mode  0/38  Ram=0
+   ³  ÃÄread_serial_speed  0/128  Ram=0
+   ³  ³  ÀÄ@ITOF  0/54  Ram=2
+   ³  ÃÄread_serial_acc  0/128  Ram=0
+   ³  ³  ÀÄ@ITOF  0/54  Ram=2
+   ³  ÃÄcenterline  0/500  Ram=4
+   ³  ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄcheck_left_proxy  0/78  Ram=0
+   ³  ³  ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄlcd_putc  0/72  Ram=1
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄstop  0/18  Ram=0
+   ³  ³  ÃÄstop  0/18  Ram=0
+   ³  ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄreverse  0/10  Ram=0
+   ³  ³  ³  ÀÄdistance_measure  0/250  Ram=2
+   ³  ³  ³     ÃÄ@DIV1616  0/66  Ram=5
+   ³  ³  ³     ÃÄ@PRINTF_D_9600_31766_31767  0/178  Ram=6
+   ³  ³  ³     ³  ÀÄ*
+   ³  ³  ³     ÃÄ@DIV1616  0/66  Ram=5
+   ³  ³  ³     ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ³     ³  ÀÄ*
+   ³  ³  ³     ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ³     ³  ÀÄ*
+   ³  ³  ³     ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ³     ³  ÀÄ*
+   ³  ³  ³     ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ³     ³  ÀÄ*
+   ³  ³  ³     ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ³     ³  ÀÄ*
+   ³  ³  ³     ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ³     ³  ÀÄ*
+   ³  ³  ³     ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ³     ³  ÀÄ*
+   ³  ³  ³     ÀÄlcd_putc  0/72  Ram=1
+   ³  ³  ³        ÀÄ*
+   ³  ³  ÃÄcheck_right_proxy  0/94  Ram=0
+   ³  ³  ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄlcd_putc  0/72  Ram=1
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄstop  0/18  Ram=0
+   ³  ³  ÃÄstop  0/18  Ram=0
+   ³  ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄnormal  0/12  Ram=0
+   ³  ³  ³  ÀÄdistance_measure  0/250  Ram=2
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄ@GET_TICKS_1  0/82  Ram=0
+   ³  ³  ÃÄcheck_left_proxy  0/78  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄstop  0/18  Ram=0
+   ³  ³  ÃÄreverse  0/10  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄstop  0/18  Ram=0
+   ³  ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@PSTRINGCN_890  0/32  Ram=3
+   ³  ³  ³  ÀÄlcd_putc  0/72  Ram=1
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄ@PRINTF_LU_890  0/186  Ram=9
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@DIV1616  0/66  Ram=5
+   ³  ³  ÃÄ@DIV1616  0/66  Ram=5
+   ³  ³  ÃÄ@PRINTF_D_9600_31766_31767  0/178  Ram=6
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@DIV1616  0/66  Ram=5
+   ³  ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄlcd_putc  0/72  Ram=1
+   ³  ³     ÀÄ*
+   ³  ÃÄgogo  0/402  Ram=9
+   ³  ³  ÃÄstop  0/18  Ram=0
+   ³  ³  ÃÄcheck_left_proxy  0/78  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄstop  0/18  Ram=0
+   ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ³  ÃÄreverse  0/10  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄcheck_left_proxy  0/78  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄstop  0/18  Ram=0
+   ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ³  ÃÄstop  0/18  Ram=0
+   ³  ³  ÃÄreverse  0/10  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄstop  0/18  Ram=0
+   ³  ³  ÃÄcheck_right_proxy  0/94  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄstop  0/18  Ram=0
+   ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ³  ÃÄnormal  0/12  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄcheck_right_proxy  0/94  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄstop  0/18  Ram=0
+   ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ³  ÃÄstop  0/18  Ram=0
+   ³  ³  ÀÄnormal  0/12  Ram=0
+   ³  ³     ÀÄ*
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄ@PRINTF_D_9600_31766_31767  0/178  Ram=6
+   ³  ³  ÀÄ*
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄ@PRINTF_D_9600_31766_31767  0/178  Ram=6
+   ³  ³  ÀÄ*
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄ@PRINTF_D_9600_31766_31767  0/178  Ram=6
+   ³  ³  ÀÄ*
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄ@DIV1616  0/66  Ram=5
+   ³  ÃÄ@PRINTF_D_9600_31766_31767  0/178  Ram=6
+   ³  ³  ÀÄ*
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_890  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄacc_start_normal_auto  0/104  Ram=3
+   ³  ³  ÃÄcheck_right_proxy  0/94  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄstop  0/18  Ram=0
+   ³  ³  ÀÄnormal  0/12  Ram=0
+   ³  ³     ÀÄ*
+   ³  ÃÄnormal  0/12  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÃÄcheck_right_proxy  0/94  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÃÄstop  0/18  Ram=0
+   ³  ÃÄcheck_right_proxy  0/94  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÃÄstop  0/18  Ram=0
+   ³  ÃÄacc_start_normal_man  0/114  Ram=3
+   ³  ³  ÃÄcheck_right_proxy  0/94  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄstop  0/18  Ram=0
+   ³  ³  ÀÄnormal  0/12  Ram=0
+   ³  ³     ÀÄ*
+   ³  ÃÄnormal  0/12  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÃÄcheck_left_proxy  0/78  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÃÄstop  0/18  Ram=0
+   ³  ÃÄacc_start_reverse_man  0/114  Ram=3
+   ³  ³  ÃÄcheck_left_proxy  0/78  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄstop  0/18  Ram=0
+   ³  ³  ÀÄreverse  0/10  Ram=0
+   ³  ³     ÀÄ*
+   ³  ÃÄreverse  0/10  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÃÄcheck_left_proxy  0/78  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÃÄstop  0/18  Ram=0
+   ³  ÃÄreverse  0/10  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÃÄstop  0/18  Ram=0
+   ³  ÃÄcheck_right_proxy  0/94  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÃÄstop  0/18  Ram=0
+   ³  ÃÄnormal  0/12  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÃÄstop  0/18  Ram=0
+   ³  ÃÄstop  0/18  Ram=0
+   ³  ÃÄacc_start_normal_auto  0/104  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄnormal  0/12  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÃÄcheck_right_proxy  0/94  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÃÄstop  0/18  Ram=0
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄacc_start_reverse_auto  0/106  Ram=5
+   ³  ³  ÃÄcheck_left_proxy  0/78  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄstop  0/18  Ram=0
+   ³  ³  ÀÄreverse  0/10  Ram=0
+   ³  ³     ÀÄ*
+   ³  ÃÄreverse  0/10  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÃÄcheck_left_proxy  0/78  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÃÄstop  0/18  Ram=0
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄcenterline  0/500  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÀÄgogo  0/402  Ram=9
+   ³     ÀÄ*
+   ÃÄserial_comm  0/46  Ram=2
+   ÃÄTimer1_isr  0/420  Ram=0
+   ³  ÃÄdelay_func  0/40  Ram=3
+   ³  ³  ÀÄ@delay_us1  0/32  Ram=1
+   ³  ÃÄdelay_func  0/40  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄdelay_func  0/40  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄdelay_func  0/40  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄdelay_func  0/40  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄdelay_func  0/40  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄdelay_func  0/40  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄdelay_func  0/40  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄdelay_func  0/40  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄdelay_func  0/40  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄdelay_func  0/40  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄdelay_func  0/40  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄdelay_func  0/40  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄdelay_func  0/40  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄdelay_func  0/40  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÀÄdelay_func  0/40  Ram=3
+   ³     ÀÄ*
+   ÀÄLOWVOLT_isr  0/526  Ram=0
