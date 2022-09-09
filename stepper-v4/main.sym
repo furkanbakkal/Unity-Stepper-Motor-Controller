@@ -1,0 +1,315 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019-01C UPPER_TICKS_1
+01D-01E strtok.save
+01F     lcd_line
+020     delay_s
+021     speed
+022     accel
+023     accel_value
+024     c
+025     mode_auto
+026     mode_manuel
+027     flag
+028     data
+029-02C str
+02D     counter
+02E     correct
+02F     quit1
+030     quit2
+031     proxy
+032     control_left
+033     control_right
+034     centered
+035-036 centercounter
+037     cc1
+038     cc2
+039     center_flag
+03A-03B step
+03C     step1
+03D     step2
+03E     line1
+03F     linecheck
+040     threshold
+041     comm_counter
+042-043 last_centercounter
+044     start
+045     q
+046     return_value
+047     check
+048     dir
+049-051 array1
+052-05A array2
+05B-05E StartTick
+05F-062 FinishTick
+063-066 CurrentTick
+067-068 @sprintf_string
+069     MAIN.i
+06A     MAIN.mode_cursor
+06B     MAIN.mod_flag
+06C     MAIN.step_data
+06D     MAIN.i
+06E     MAIN.j
+06F     MAIN.i
+070     MAIN.j
+071     acc_start_normal_man.i
+071     seri_check.step_data
+071     acc_start_normal_auto.i
+071     acc_start_reverse_auto.i
+071     lcd_init.i
+071     acc_start_reverse_man.i
+071     lcd_load_custom_chars.i
+071     MAIN.@SCRATCH1
+071     @PSTRINGC_9600_31766_31767.@SCRATCH1
+072-073 @ITOF.P1
+072     acc_start_reverse_auto.j
+072     centerline.delay
+072     @PRINTF_D_890.P1
+072     acc_start_normal_auto.j
+072     acc_start_reverse_man.j
+072     @PRINTF_U_890.P1
+072     gogo.start
+072     acc_start_normal_man.j
+072     lcd_init.@SCRATCH1
+072     lcd_load_custom_chars.@SCRATCH1
+072     MAIN.@SCRATCH2
+072     @PSTRINGC_9600_31766_31767.@SCRATCH2
+073     gogo.i
+073     @PRINTF_D_890.P1
+073     centerline.step_data
+073     @PRINTF_U_890.P1
+073     acc_start_normal_man.@SCRATCH1
+073     acc_start_reverse_man.@SCRATCH1
+073     acc_start_normal_auto.@SCRATCH1
+073     acc_start_reverse_auto.@SCRATCH1
+073     MAIN.@SCRATCH3
+074     gogo.j
+074     centerline.i
+074     acc_start_reverse_auto.@SCRATCH2
+074     MAIN.@SCRATCH4
+074     @PRINTF_D_890.@SCRATCH1
+075     @PSTRINGCN_890.P1
+075     gogo.i
+075-076 @PRINTF_LU_890.P1
+075     acc_start_reverse_auto.@SCRATCH3
+075     centerline.@SCRATCH1
+075     @PRINTF_D_890.@SCRATCH2
+076     gogo.j
+076     @PSTRINGCN_890.@SCRATCH1
+076     @PRINTF_D_890.@SCRATCH3
+077     distance_measure.step_data
+077     @PSTRINGCN_890.@SCRATCH2
+077     @PRINTF_LU_890.@SCRATCH1
+077     gogo.@SCRATCH1
+077     @PRINTF_D_890.@SCRATCH4
+078     @PRINTF_D_9600_31766_31767.P1
+078-079 @DIV1616.P2
+078     @PSTRINGC_890.@SCRATCH1
+078     distance_measure.@SCRATCH1
+078     @PRINTF_LU_890.@SCRATCH2
+079     @PRINTF_D_9600_31766_31767.P1
+079     @PSTRINGC_890.@SCRATCH2
+079     @PRINTF_LU_890.@SCRATCH3
+07A-07B @DIV1616.P1
+07A     @PRINTF_D_9600_31766_31767.@SCRATCH1
+07A     @PRINTF_LU_890.@SCRATCH4
+07B     @PRINTF_D_9600_31766_31767.@SCRATCH2
+07B     @PRINTF_LU_890.@SCRATCH5
+07C     @DIV1616.@SCRATCH1
+07C     @PRINTF_D_9600_31766_31767.@SCRATCH3
+07C     @PRINTF_LU_890.@SCRATCH6
+07D     @PRINTF_D_9600_31766_31767.@SCRATCH4
+07D     @PRINTF_LU_890.@SCRATCH7
+07E     @DIV88.P1
+07E     lcd_putc.c
+07F     lcd_gotoxy.x
+07F     @DIV88.P1
+07F     @delay_ms1.P2
+080     lcd_gotoxy.y
+080     @DIV88.@SCRATCH1
+081     lcd_gotoxy.address
+082     lcd_gotoxy.@SCRATCH1
+083     lcd_send_byte.address
+084     lcd_send_byte.n
+085     lcd_read_byte.low
+085     lcd_send_byte.@SCRATCH1
+086     lcd_read_byte.high
+086     lcd_send_nibble.nibble
+087     lcd_read_nibble.retval
+087.0   lcd_read_nibble.retval_0
+087.1   lcd_read_nibble.retval_1
+087.2   lcd_read_nibble.retval_2
+087.3   lcd_read_nibble.retval_3
+087     lcd_read_byte.@SCRATCH1
+088     delay_func.loop
+089     delay_func.i
+08A     delay_func.@SCRATCH1
+08B     @delay_us1.P1
+F55     CCP_5
+F55     CCP_5_LOW
+F56     CCP_5_HIGH
+F58     CCP_4_LOW
+F58     CCP_4
+F59     CCP_4_HIGH
+F5E     CCP_3_LOW
+F5E     CCP_3
+F5F     CCP_3_HIGH
+F67     CCP_2_LOW
+F67     CCP_2
+F68     CCP_2_HIGH
+F78.6   C2OUT
+F79.6   C1OUT
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0000CA  LCD_INIT_STRING.call
+0000DA  LCD_INIT_STRING.data
+0000DE  lcd_custom_chars.call
+0000EE  lcd_custom_chars.data
+000106  @const976.call
+000108  @const995.call
+00010A  @const996.call
+00010C  @const997.call
+000110  @const1019.call
+00011A  @const1020.call
+00011C  @const1021.call
+000128  serial_comm
+00015A  @delay_us1
+00017A  delay_func
+0001A2  Timer1_isr
+000346  LOWVOLT_isr
+000554  @const1056.call
+000560  @const1063.call
+000570  @const1064.call
+00057C  @const1069.call
+000586  @const1070.call
+000590  @const1071.call
+00059C  @const1075.call
+00059E  @const1077.call
+0005A4  @const1078.call
+0005A6  @const1081.call
+0005A8  @const1084.call
+0005AC  @const1086.call
+0005AE  @const1088.call
+0005B4  @const1089.call
+0005B6  @const1092.call
+0005B8  @const1095.call
+0005BC  @const1096.call
+0005BE  @const1098.call
+0005C0  @const1100.call
+0005C2  @const1102.call
+0005C4  @const1112.call
+0005CE  @delay_ms1
+0005F6  lcd_send_nibble
+00063C  lcd_read_nibble
+00067C  lcd_read_byte
+0006A0  lcd_send_byte
+0006E2  lcd_init
+000734  lcd_load_custom_chars
+000766  @GET_TICKS_1
+0007B8  lcd_gotoxy
+0007F8  lcd_putc
+000840  @PSTRINGC_890
+000860  @PRINTF_LU_890
+00091A  @DIV88
+000942  @PRINTF_D_890
+0009EC  @PRINTF_U_890
+000A52  read_serial_mode
+000A76  @ITOF
+000AAC  read_serial_speed
+000B2A  read_serial_acc
+000BA8  check_left_proxy
+000C00  stop
+000C12  @DIV1616
+000C54  @PRINTF_D_9600_31766_31767
+000D06  distance_measure
+000DFE  reverse
+000E08  check_right_proxy
+000E6E  normal
+000E7A  @PSTRINGCN_890
+000E9A  centerline
+0010CE  gogo
+001292  seri_check
+00138E  @PSTRINGC_9600_31766_31767
+0013B0  acc_start_normal_auto
+00143C  acc_start_normal_man
+0014AC  acc_start_reverse_man
+00151E  acc_start_reverse_auto
+0015AE  MAIN
+0015AE  @cinit1
+00164E  @cinit2
+
+Project Directory:
+    C:\Users\furka\Desktop\Unity\lcd_stepper_control\
+
+Project Files:
+    main.c                                                  [09-Eyl-22 18:09  CRC=EE48BA99]
+    main.h                                                  [08-Eyl-22 17:47  CRC=D872A938]
+    ..\..\..\..\..\Program Files (x86)\PICC\Devices\18F46K22.h [21-Þub-20 15:51  CRC=F1815AA0]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h [04-Ara-19 10:56  CRC=428BEDCB]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h [30-Oca-19 11:26  CRC=897CEC6C]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h [03-Oca-08 14:55  CRC=2D1F019F]
+    flex_lcd420.c                                           [10-Aðu-22 13:48  CRC=4F9F77BA]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\internal_eeprom.c [18-Þub-20 14:59  CRC=573C37CA]
+
+Source signature=AF7C8195
+Program memory checksum=0000
+Hex file CRC=DC4E
+
+Units:
+    C:\Users\furka\Desktop\Unity\lcd_stepper_control\main (main)
+
+Compiler Settings:
+    Processor:      PIC18F46K22
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX32:      main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA

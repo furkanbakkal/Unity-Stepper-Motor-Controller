@@ -1,0 +1,21 @@
+Compiling C:\Users\furka\Desktop\Unity\lcd_stepper_control\main on 09-Eyl-22 at 18:09
+--- Info 300 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.h" Line 8(1,1): More info:   Timer 0 tick time is 128,00 us
+>>> Warning 214 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 178(1,1): Operator precedance rules may not be as intended, use () to clarify
+>>> Warning 203 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 649(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 675(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 760(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 763(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 821(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 1352(1,1): Condition always TRUE
+>>> Warning 214 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 1363(1,1): Operator precedance rules may not be as intended, use () to clarify
+>>> Warning 214 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 1374(1,1): Operator precedance rules may not be as intended, use () to clarify
+>>> Warning 214 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 1433(1,1): Operator precedance rules may not be as intended, use () to clarify
+>>> Warning 214 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 1444(1,1): Operator precedance rules may not be as intended, use () to clarify
+>>> Warning 230 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 1790(1,1): String truncated
+>>> Warning 230 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 1818(1,1): String truncated
+>>> Warning 202 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 64(6,11): Variable never used:   check
+>>> Warning 202 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 67(6,12): Variable never used:   array1
+>>> Warning 202 "C:\Users\furka\Desktop\Unity\lcd_stepper_control\main.c" Line 68(6,12): Variable never used:   array2
+      Memory usage:   ROM=15%      RAM=3% - 4%
+      0 Errors,  16 Warnings.
+Build Successful.
