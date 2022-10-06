@@ -1,0 +1,26 @@
+Compiling C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main on 05-Eki-22 at 21:13
+--- Info 300 "C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main.h" Line 8(1,1): More info:   Timer 0 tick time is 128,00 us
+>>> Warning 214 "C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main.c" Line 180(1,1): Operator precedance rules may not be as intended, use () to clarify
+>>> Warning 203 "C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main.c" Line 651(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main.c" Line 677(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main.c" Line 762(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main.c" Line 765(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main.c" Line 823(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main.c" Line 1361(1,1): Condition always TRUE
+>>> Warning 214 "C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main.c" Line 1372(1,1): Operator precedance rules may not be as intended, use () to clarify
+>>> Warning 214 "C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main.c" Line 1383(1,1): Operator precedance rules may not be as intended, use () to clarify
+>>> Warning 214 "C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main.c" Line 1442(1,1): Operator precedance rules may not be as intended, use () to clarify
+>>> Warning 214 "C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main.c" Line 1453(1,1): Operator precedance rules may not be as intended, use () to clarify
+>>> Warning 230 "C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main.c" Line 1799(1,1): String truncated
+>>> Warning 230 "C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main.c" Line 1827(1,1): String truncated
+>>> Warning 216 "C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main.c" Line 1849(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+>>> Warning 202 "C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main.c" Line 65(6,11): Variable never used:   check
+>>> Warning 202 "C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main.c" Line 68(6,12): Variable never used:   array1
+>>> Warning 202 "C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main.c" Line 69(6,12): Variable never used:   array2
+>>> Warning 202 "C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main.c" Line 176(14,23): Variable never used:   step_data
+>>> Warning 202 "C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main.c" Line 737(10,19): Variable never used:   step_data
+>>> Warning 202 "C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main.c" Line 932(16,25): Variable never used:   step_data
+>>> Warning 202 "C:\Users\furka\OneDrive\Masaüstü\stepper-control-final\main.c" Line 1604(22,31): Variable never used:   step_data
+      Memory usage:   ROM=14%      RAM=3% - 4%
+      0 Errors,  21 Warnings.
+Build Successful.
